@@ -1,0 +1,744 @@
+{
+  "address": "0xA7Aba65B03C93C197D6EC59B3362248078Fd45fa",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "depositor",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "depositor",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RewardDeposited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "withdrawer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdrawn",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_ADMIN_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "depositRewards",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleAdmin",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastRewardBlock",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "revokeRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "rewardBalanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rewards",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalDepositBeforeLastReward",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userInfos",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "totalDeposit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "depositAfterLastReward",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "depositBeforeLastWithdraw",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastDepositBlock",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastWithdrawBlock",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rewardOnLastWithdraw",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalDepositBeforeLastWithdraw",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawBalanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0x29d79272c695799e50b725ad713b950cd3dc31eaddd10782fce5ce569cfc4ba2",
+  "receipt": {
+    "to": null,
+    "from": "0x9d9Fd51ebEEA7f90262FA7CDa10071eF7eD1b365",
+    "contractAddress": "0xA7Aba65B03C93C197D6EC59B3362248078Fd45fa",
+    "transactionIndex": 0,
+    "gasUsed": "1555895",
+    "logsBloom": "0x00000004000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000020000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000001002100000000000000000000000000100000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xd4583718f2480fcc1d34ee985fce2c69862b1b75202cdb7863806ec27d5265e8",
+    "transactionHash": "0x29d79272c695799e50b725ad713b950cd3dc31eaddd10782fce5ce569cfc4ba2",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 30356271,
+        "transactionHash": "0x29d79272c695799e50b725ad713b950cd3dc31eaddd10782fce5ce569cfc4ba2",
+        "address": "0xA7Aba65B03C93C197D6EC59B3362248078Fd45fa",
+        "topics": [
+          "0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000009d9fd51ebeea7f90262fa7cda10071ef7ed1b365",
+          "0x0000000000000000000000009d9fd51ebeea7f90262fa7cda10071ef7ed1b365"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0xd4583718f2480fcc1d34ee985fce2c69862b1b75202cdb7863806ec27d5265e8"
+      }
+    ],
+    "blockNumber": 30356271,
+    "cumulativeGasUsed": "1555895",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "e3092812957cdfcbc326198a6ea27a7c",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"depositor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposited\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"depositor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RewardDeposited\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"withdrawer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdrawn\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"depositRewards\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastRewardBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"rewardBalanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewards\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalDeposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalDepositBeforeLastReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userInfos\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"totalDeposit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"depositAfterLastReward\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"depositBeforeLastWithdraw\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastDepositBlock\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastWithdrawBlock\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"rewardOnLastWithdraw\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalDepositBeforeLastWithdraw\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"withdrawBalanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"deposit()\":{\"details\":\"make user deposit\"},\"depositRewards()\":{\"details\":\"put reward to pool\"},\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"rewardBalanceOf(address)\":{\"details\":\"get reward amount of user (except deposit)\",\"params\":{\"user\":\"address of user\"},\"returns\":{\"_0\":\"reward\"}},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"},\"withdraw(address)\":{\"details\":\"withdraw user deposit and reward to recipient\",\"params\":{\"recipient\":\"recipient address\"}},\"withdrawBalanceOf(address)\":{\"details\":\"get amount available to withdraw\",\"params\":{\"user\":\"address of user\"},\"returns\":{\"_0\":\"value\"}}},\"stateVariables\":{\"lastRewardBlock\":{\"details\":\"block where the last reward is deposited\"},\"rewards\":{\"details\":\"total rewards deposited by team members\"},\"totalDeposit\":{\"details\":\"total deposit made by users\"},\"totalDepositBeforeLastReward\":{\"details\":\"total deposit made by all users until the last reward deposit\"},\"userInfos\":{\"details\":\"user address => user info\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"d: user deposit  r: reward deposit  w: first user withdrawl  w*: user withdrawl now  timeline:  ---- d ---- r ---- w ---- d ---- r ---- d ---- w* ---->  ---------------------------------------->                total deposit  --------------------------------->                       rewards  ------------------->                                     reward on last withdrawl  ------------------->                                     deposit before last withdrawl                                   +------>                deposit after last reward                     +------------->                       deposits applicable to this part participates in user reward calculation  user reward =     (rewards - reward on last withdrawl) *     (total deposit -  deposit before last withdraw - deposit after last withdrawl) /     total deposit before last rewards\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/EthPool.sol\":\"EthPool\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/AccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\nimport \\\"../utils/Strings.sol\\\";\\nimport \\\"../utils/introspection/ERC165.sol\\\";\\n\\n/**\\n * @dev External interface of AccessControl declared to support ERC165 detection.\\n */\\ninterface IAccessControl {\\n    function hasRole(bytes32 role, address account) external view returns (bool);\\n    function getRoleAdmin(bytes32 role) external view returns (bytes32);\\n    function grantRole(bytes32 role, address account) external;\\n    function revokeRole(bytes32 role, address account) external;\\n    function renounceRole(bytes32 role, address account) external;\\n}\\n\\n/**\\n * @dev Contract module that allows children to implement role-based access\\n * control mechanisms. This is a lightweight version that doesn't allow enumerating role\\n * members except through off-chain means by accessing the contract event logs. Some\\n * applications may benefit from on-chain enumerability, for those cases see\\n * {AccessControlEnumerable}.\\n *\\n * Roles are referred to by their `bytes32` identifier. These should be exposed\\n * in the external API and be unique. The best way to achieve this is by\\n * using `public constant` hash digests:\\n *\\n * ```\\n * bytes32 public constant MY_ROLE = keccak256(\\\"MY_ROLE\\\");\\n * ```\\n *\\n * Roles can be used to represent a set of permissions. To restrict access to a\\n * function call, use {hasRole}:\\n *\\n * ```\\n * function foo() public {\\n *     require(hasRole(MY_ROLE, msg.sender));\\n *     ...\\n * }\\n * ```\\n *\\n * Roles can be granted and revoked dynamically via the {grantRole} and\\n * {revokeRole} functions. Each role has an associated admin role, and only\\n * accounts that have a role's admin role can call {grantRole} and {revokeRole}.\\n *\\n * By default, the admin role for all roles is `DEFAULT_ADMIN_ROLE`, which means\\n * that only accounts with this role will be able to grant or revoke other\\n * roles. More complex role relationships can be created by using\\n * {_setRoleAdmin}.\\n *\\n * WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to\\n * grant and revoke this role. Extra precautions should be taken to secure\\n * accounts that have been granted it.\\n */\\nabstract contract AccessControl is Context, IAccessControl, ERC165 {\\n    struct RoleData {\\n        mapping (address => bool) members;\\n        bytes32 adminRole;\\n    }\\n\\n    mapping (bytes32 => RoleData) private _roles;\\n\\n    bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;\\n\\n    /**\\n     * @dev Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole`\\n     *\\n     * `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite\\n     * {RoleAdminChanged} not being emitted signaling this.\\n     *\\n     * _Available since v3.1._\\n     */\\n    event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole);\\n\\n    /**\\n     * @dev Emitted when `account` is granted `role`.\\n     *\\n     * `sender` is the account that originated the contract call, an admin role\\n     * bearer except when using {_setupRole}.\\n     */\\n    event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Emitted when `account` is revoked `role`.\\n     *\\n     * `sender` is the account that originated the contract call:\\n     *   - if using `revokeRole`, it is the admin role bearer\\n     *   - if using `renounceRole`, it is the role bearer (i.e. `account`)\\n     */\\n    event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Modifier that checks that an account has a specific role. Reverts\\n     * with a standardized message including the required role.\\n     *\\n     * The format of the revert reason is given by the following regular expression:\\n     *\\n     *  /^AccessControl: account (0x[0-9a-f]{20}) is missing role (0x[0-9a-f]{32})$/\\n     *\\n     * _Available since v4.1._\\n     */\\n    modifier onlyRole(bytes32 role) {\\n        _checkRole(role, _msgSender());\\n        _;\\n    }\\n\\n    /**\\n     * @dev See {IERC165-supportsInterface}.\\n     */\\n    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n        return interfaceId == type(IAccessControl).interfaceId\\n            || super.supportsInterface(interfaceId);\\n    }\\n\\n    /**\\n     * @dev Returns `true` if `account` has been granted `role`.\\n     */\\n    function hasRole(bytes32 role, address account) public view override returns (bool) {\\n        return _roles[role].members[account];\\n    }\\n\\n    /**\\n     * @dev Revert with a standard message if `account` is missing `role`.\\n     *\\n     * The format of the revert reason is given by the following regular expression:\\n     *\\n     *  /^AccessControl: account (0x[0-9a-f]{20}) is missing role (0x[0-9a-f]{32})$/\\n     */\\n    function _checkRole(bytes32 role, address account) internal view {\\n        if(!hasRole(role, account)) {\\n            revert(string(abi.encodePacked(\\n                \\\"AccessControl: account \\\",\\n                Strings.toHexString(uint160(account), 20),\\n                \\\" is missing role \\\",\\n                Strings.toHexString(uint256(role), 32)\\n            )));\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole} and\\n     * {revokeRole}.\\n     *\\n     * To change a role's admin, use {_setRoleAdmin}.\\n     */\\n    function getRoleAdmin(bytes32 role) public view override returns (bytes32) {\\n        return _roles[role].adminRole;\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function grantRole(bytes32 role, address account) public virtual override onlyRole(getRoleAdmin(role)) {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * If `account` had been granted `role`, emits a {RoleRevoked} event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function revokeRole(bytes32 role, address account) public virtual override onlyRole(getRoleAdmin(role)) {\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from the calling account.\\n     *\\n     * Roles are often managed via {grantRole} and {revokeRole}: this function's\\n     * purpose is to provide a mechanism for accounts to lose their privileges\\n     * if they are compromised (such as when a trusted device is misplaced).\\n     *\\n     * If the calling account had been granted `role`, emits a {RoleRevoked}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must be `account`.\\n     */\\n    function renounceRole(bytes32 role, address account) public virtual override {\\n        require(account == _msgSender(), \\\"AccessControl: can only renounce roles for self\\\");\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event. Note that unlike {grantRole}, this function doesn't perform any\\n     * checks on the calling account.\\n     *\\n     * [WARNING]\\n     * ====\\n     * This function should only be called from the constructor when setting\\n     * up the initial roles for the system.\\n     *\\n     * Using this function in any other way is effectively circumventing the admin\\n     * system imposed by {AccessControl}.\\n     * ====\\n     */\\n    function _setupRole(bytes32 role, address account) internal virtual {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Sets `adminRole` as ``role``'s admin role.\\n     *\\n     * Emits a {RoleAdminChanged} event.\\n     */\\n    function _setRoleAdmin(bytes32 role, bytes32 adminRole) internal virtual {\\n        emit RoleAdminChanged(role, getRoleAdmin(role), adminRole);\\n        _roles[role].adminRole = adminRole;\\n    }\\n\\n    function _grantRole(bytes32 role, address account) private {\\n        if (!hasRole(role, account)) {\\n            _roles[role].members[account] = true;\\n            emit RoleGranted(role, account, _msgSender());\\n        }\\n    }\\n\\n    function _revokeRole(bytes32 role, address account) private {\\n        if (hasRole(role, account)) {\\n            _roles[role].members[account] = false;\\n            emit RoleRevoked(role, account, _msgSender());\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x98fac37221212c8f126f198d262a4df86394bd1a9969f61e40739fe8ac013dd8\",\"license\":\"MIT\"},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Contract module that helps prevent reentrant calls to a function.\\n *\\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\\n * available, which can be applied to functions to make sure there are no nested\\n * (reentrant) calls to them.\\n *\\n * Note that because there is a single `nonReentrant` guard, functions marked as\\n * `nonReentrant` may not call one another. This can be worked around by making\\n * those functions `private`, and then adding `external` `nonReentrant` entry\\n * points to them.\\n *\\n * TIP: If you would like to learn more about reentrancy and alternative ways\\n * to protect against it, check out our blog post\\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\\n */\\nabstract contract ReentrancyGuard {\\n    // Booleans are more expensive than uint256 or any type that takes up a full\\n    // word because each write operation emits an extra SLOAD to first read the\\n    // slot's contents, replace the bits taken up by the boolean, and then write\\n    // back. This is the compiler's defense against contract upgrades and\\n    // pointer aliasing, and it cannot be disabled.\\n\\n    // The values being non-zero value makes deployment a bit more expensive,\\n    // but in exchange the refund on every call to nonReentrant will be lower in\\n    // amount. Since refunds are capped to a percentage of the total\\n    // transaction's gas, it is best to keep them low in cases like this one, to\\n    // increase the likelihood of the full refund coming into effect.\\n    uint256 private constant _NOT_ENTERED = 1;\\n    uint256 private constant _ENTERED = 2;\\n\\n    uint256 private _status;\\n\\n    constructor () {\\n        _status = _NOT_ENTERED;\\n    }\\n\\n    /**\\n     * @dev Prevents a contract from calling itself, directly or indirectly.\\n     * Calling a `nonReentrant` function from another `nonReentrant`\\n     * function is not supported. It is possible to prevent this from happening\\n     * by making the `nonReentrant` function external, and make it call a\\n     * `private` function that does the actual work.\\n     */\\n    modifier nonReentrant() {\\n        // On the first call to nonReentrant, _notEntered will be true\\n        require(_status != _ENTERED, \\\"ReentrancyGuard: reentrant call\\\");\\n\\n        // Any calls to nonReentrant after this point will fail\\n        _status = _ENTERED;\\n\\n        _;\\n\\n        // By storing the original value once again, a refund is triggered (see\\n        // https://eips.ethereum.org/EIPS/eip-2200)\\n        _status = _NOT_ENTERED;\\n    }\\n}\\n\",\"keccak256\":\"0x1278c76b840063ff5e14a2d7c5707812c1eabc2342ed040bf862c2d7552102fe\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xf930d2df426bfcfc1f7415be724f04081c96f4fb9ec8d0e3a521c07692dface0\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Strings.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev String operations.\\n */\\nlibrary Strings {\\n    bytes16 private constant alphabet = \\\"0123456789abcdef\\\";\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` decimal representation.\\n     */\\n    function toString(uint256 value) internal pure returns (string memory) {\\n        // Inspired by OraclizeAPI's implementation - MIT licence\\n        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol\\n\\n        if (value == 0) {\\n            return \\\"0\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 digits;\\n        while (temp != 0) {\\n            digits++;\\n            temp /= 10;\\n        }\\n        bytes memory buffer = new bytes(digits);\\n        while (value != 0) {\\n            digits -= 1;\\n            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));\\n            value /= 10;\\n        }\\n        return string(buffer);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation.\\n     */\\n    function toHexString(uint256 value) internal pure returns (string memory) {\\n        if (value == 0) {\\n            return \\\"0x00\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 length = 0;\\n        while (temp != 0) {\\n            length++;\\n            temp >>= 8;\\n        }\\n        return toHexString(value, length);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.\\n     */\\n    function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {\\n        bytes memory buffer = new bytes(2 * length + 2);\\n        buffer[0] = \\\"0\\\";\\n        buffer[1] = \\\"x\\\";\\n        for (uint256 i = 2 * length + 1; i > 1; --i) {\\n            buffer[i] = alphabet[value & 0xf];\\n            value >>= 4;\\n        }\\n        require(value == 0, \\\"Strings: hex length insufficient\\\");\\n        return string(buffer);\\n    }\\n\\n}\\n\",\"keccak256\":\"0x456e9b3a2bfe189b5249857f624f4139e59331db518483b456c4e587a20552e0\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"./IERC165.sol\\\";\\n\\n/**\\n * @dev Implementation of the {IERC165} interface.\\n *\\n * Contracts that want to implement ERC165 should inherit from this contract and override {supportsInterface} to check\\n * for the additional interface id that will be supported. For example:\\n *\\n * ```solidity\\n * function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n *     return interfaceId == type(MyInterface).interfaceId || super.supportsInterface(interfaceId);\\n * }\\n * ```\\n *\\n * Alternatively, {ERC165Storage} provides an easier to use but more expensive implementation.\\n */\\nabstract contract ERC165 is IERC165 {\\n    /**\\n     * @dev See {IERC165-supportsInterface}.\\n     */\\n    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n        return interfaceId == type(IERC165).interfaceId;\\n    }\\n}\\n\",\"keccak256\":\"0x5718c5df9bd67ac68a796961df938821bb5dc0cd4c6118d77e9145afb187409b\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\"},\"contracts/EthPool.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity 0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/access/AccessControl.sol\\\";\\nimport \\\"@openzeppelin/contracts/security/ReentrancyGuard.sol\\\";\\nimport \\\"./interfaces/IEthPool.sol\\\";\\n\\n\\n/**\\n *  d: user deposit\\n *  r: reward deposit\\n *  w: first user withdrawl\\n *  w*: user withdrawl now\\n *\\n *  timeline:\\n *  ---- d ---- r ---- w ---- d ---- r ---- d ---- w* ---->\\n *\\n *  ---------------------------------------->                total deposit\\n *  --------------------------------->                       rewards\\n *  ------------------->                                     reward on last withdrawl\\n *  ------------------->                                     deposit before last withdrawl\\n *                                   +------>                deposit after last reward\\n *                     +------------->                       deposits applicable to this part participates in user reward calculation\\n *\\n *  user reward =\\n *     (rewards - reward on last withdrawl) *\\n *     (total deposit -  deposit before last withdraw - deposit after last withdrawl) /\\n *     total deposit before last rewards\\n *\\n */\\ncontract EthPool is IEthPool, AccessControl, ReentrancyGuard {\\n\\n  struct UserInfo {\\n    uint256 totalDeposit;\\n    uint256 depositAfterLastReward;\\n    uint256 depositBeforeLastWithdraw;\\n    uint256 lastDepositBlock;\\n    uint256 lastWithdrawBlock;\\n    /// @dev rewards deposited until the user's last withdrawal\\n    uint256 rewardOnLastWithdraw;\\n    /// @dev total deposit made from all users until the user's last withdrawl\\n    uint256 totalDepositBeforeLastWithdraw;\\n  }\\n\\n  bytes32 constant TEAM_ROLE = DEFAULT_ADMIN_ROLE;\\n\\n  /// @dev total rewards deposited by team members\\n  uint256 public rewards;\\n\\n  /// @dev total deposit made by users\\n  uint256 public totalDeposit;\\n\\n  /// @dev block where the last reward is deposited\\n  uint256 public lastRewardBlock;\\n\\n  /// @dev total deposit made by all users until the last reward deposit\\n  uint256 public totalDepositBeforeLastReward;\\n\\n  /// @dev user address => user info\\n  mapping(address => UserInfo) public userInfos;\\n\\n\\n  receive() external payable { }\\n\\n  constructor() ReentrancyGuard() {\\n    _setupRole(TEAM_ROLE, msg.sender);\\n  }\\n\\n  /**\\n   * @dev check if he is a team member\\n   */\\n  modifier onlyTeamMember() {\\n    require(hasRole(TEAM_ROLE, msg.sender), \\\"Not team member\\\");\\n    _;\\n  }\\n\\n  /**\\n   * @dev put reward to pool\\n   */\\n  function depositRewards() payable external override onlyTeamMember {\\n    rewards += msg.value;\\n    totalDepositBeforeLastReward = totalDeposit;\\n    lastRewardBlock = block.number;\\n\\n    emit RewardDeposited(msg.sender, msg.value);\\n  }\\n\\n  /**\\n   * @dev make user deposit\\n   */\\n  function deposit() payable external override {\\n    UserInfo storage userInfo = userInfos[msg.sender];\\n\\n    totalDeposit += msg.value; \\n    userInfo.totalDeposit += msg.value;\\n\\n    if (userInfo.lastWithdrawBlock < lastRewardBlock) {\\n\\n      // note: this should be EQUAL or less than\\n      // otherwise depositAfterLastReward will never be reset\\n      // if reward and deposit happens on the same block\\n      if (userInfo.lastDepositBlock <= lastRewardBlock) {\\n        userInfo.depositAfterLastReward = 0;\\n      }\\n\\n      userInfo.depositAfterLastReward += msg.value;\\n      userInfo.lastDepositBlock = block.number;\\n    }\\n\\n    emit Deposited(msg.sender, msg.value);\\n  }\\n\\n  /**\\n   * @dev get reward amount of user (except deposit)\\n   * @param user address of user\\n   * @return reward\\n   */\\n  function rewardBalanceOf(address user) public override view returns (uint256) {\\n    UserInfo storage userInfo = userInfos[user];\\n    uint256 depositAfterLastReward = userInfo.depositAfterLastReward;\\n    uint256 totalDepositSinceLastWithdraw = totalDepositBeforeLastReward - userInfo.totalDepositBeforeLastWithdraw;\\n    uint256 userDeposit;\\n\\n    if (userInfo.lastDepositBlock < lastRewardBlock) {\\n      // no user deposit is made after the last reward deposit\\n      // hence user.depositAFterReward is not updated, we use 0\\n      depositAfterLastReward = 0;\\n    }\\n\\n    // calcualte user deposit made between his last withdrawl and the last reward deposit\\n    // since user reward is calulated from user deposit made before the reward deposit\\n    if (userInfo.lastWithdrawBlock < lastRewardBlock) {\\n      userDeposit = userInfo.totalDeposit - userInfo.depositBeforeLastWithdraw - depositAfterLastReward;\\n    }\\n\\n    if (totalDepositSinceLastWithdraw == 0) {\\n      return 0;\\n    }\\n\\n    // if the above condition does not meet, it is when no reward deposit is made after the last withdrawl\\n    // we leave user deposit as 0 though user deposits are made after the last withdrawl\\n    // because they don't participate in user reward calculation\\n\\n    // A = reward deposit after the last user withdrawl *\\n    // B = user deposit between his last withdrawl and the last reward deposit\\n    //     (user deposit made after the last reward deposit won't affect on reward calculation)\\n    // C = total deposit made from all users between the user's last withdrawl and the last reward deposit\\n    // user reward = A * B / C\\n    return (rewards - userInfo.rewardOnLastWithdraw) * userDeposit / totalDepositSinceLastWithdraw;\\n  }\\n\\n  /**\\n   * @dev get amount available to withdraw\\n   * @param user address of user\\n   * @return value\\n   */\\n  function withdrawBalanceOf(address user) public override view returns (uint256) {\\n    UserInfo storage userInfo = userInfos[user];\\n    return userInfo.totalDeposit - userInfo.depositBeforeLastWithdraw + rewardBalanceOf(user);\\n  }\\n\\n  /**\\n   * @dev withdraw user deposit and reward to recipient\\n   * @param recipient recipient address\\n   */\\n  function withdraw(address payable recipient) external override nonReentrant {\\n    uint256 amount = withdrawBalanceOf(msg.sender);\\n\\n    if (amount > 0) {\\n      UserInfo storage userInfo = userInfos[msg.sender];\\n\\n      userInfo.depositBeforeLastWithdraw = userInfo.totalDeposit;\\n      userInfo.lastWithdrawBlock = block.number;\\n      userInfo.rewardOnLastWithdraw = rewards;\\n      userInfo.totalDepositBeforeLastWithdraw = totalDepositBeforeLastReward;\\n\\n      (bool success, ) = recipient.call{value: amount}(\\\"\\\");\\n      require(success, \\\"Failed to withdraw\\\");\\n    }\\n\\n    emit Withdrawn(msg.sender, amount);\\n  }\\n}\\n\",\"keccak256\":\"0x8c1882bf50929df6f8915b8bbc9e92c80a32c6f6228e667986bf8c6a7556e7ff\",\"license\":\"Unlicense\"},\"contracts/interfaces/IEthPool.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity 0.8.4;\\n\\ninterface IEthPool {\\n  event RewardDeposited(address indexed depositor, uint256 amount);\\n\\n  event Deposited(address indexed depositor, uint256 amount);\\n\\n  event Withdrawn(address indexed withdrawer, uint256 amount);\\n\\n  function depositRewards() payable external;\\n\\n  function deposit() payable external;\\n\\n  function rewardBalanceOf(address user) external view returns (uint256);\\n\\n  function withdrawBalanceOf(address user) external view returns (uint256);\\n\\n  function withdraw(address payable recipient) external;\\n}\\n\",\"keccak256\":\"0x90f99124995f42e90c8942c82727f2d15bf6002b8f9b360fcecd2786fe2098ec\",\"license\":\"Unlicense\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b50600180819055506200002e6000801b336200003460201b60201c565b620001ad565b6200004682826200004a60201b60201c565b5050565b6200005c82826200013b60201b60201c565b6200013757600160008084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550620000dc620001a560201b60201c565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45b5050565b600080600084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600033905090565b611a5c80620001bd6000396000f3fe6080604052600436106101015760003560e01c806391d1485411610095578063b37eabd911610064578063b37eabd91461034a578063d0e30db014610375578063d547741f1461037f578063e964b644146103a8578063f6153ccd146103e557610108565b806391d148541461028c5780639ec5a894146102c9578063a217fddf146102f4578063a9f8d1811461031f57610108565b80632f2ff15d116100d15780632f2ff15d146101ce57806336568abe146101f757806343b0215f1461022057806351cff8d91461026357610108565b806265453c1461010d57806301ffc9a71461014a578063152111f714610187578063248a9ca31461019157610108565b3661010857005b600080fd5b34801561011957600080fd5b50610134600480360381019061012f919061117f565b610410565b6040516101419190611555565b60405180910390f35b34801561015657600080fd5b50610171600480360381019061016c9190611236565b610483565b60405161017e919061145d565b60405180910390f35b61018f6104fd565b005b34801561019d57600080fd5b506101b860048036038101906101b391906111d1565b6105c2565b6040516101c59190611478565b60405180910390f35b3480156101da57600080fd5b506101f560048036038101906101f091906111fa565b6105e1565b005b34801561020357600080fd5b5061021e600480360381019061021991906111fa565b61060a565b005b34801561022c57600080fd5b506102476004803603810190610242919061117f565b61068d565b60405161025a9796959493929190611570565b60405180910390f35b34801561026f57600080fd5b5061028a600480360381019061028591906111a8565b6106cf565b005b34801561029857600080fd5b506102b360048036038101906102ae91906111fa565b6108aa565b6040516102c0919061145d565b60405180910390f35b3480156102d557600080fd5b506102de610914565b6040516102eb9190611555565b60405180910390f35b34801561030057600080fd5b5061030961091a565b6040516103169190611478565b60405180910390f35b34801561032b57600080fd5b50610334610921565b6040516103419190611555565b60405180910390f35b34801561035657600080fd5b5061035f610927565b60405161036c9190611555565b60405180910390f35b61037d61092d565b005b34801561038b57600080fd5b506103a660048036038101906103a191906111fa565b610a40565b005b3480156103b457600080fd5b506103cf60048036038101906103ca919061117f565b610a69565b6040516103dc9190611555565b60405180910390f35b3480156103f157600080fd5b506103fa610b5b565b6040516104079190611555565b60405180910390f35b600080600660008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905061045d83610a69565b8160020154826000015461047191906116f2565b61047b9190611611565b915050919050565b60007f7965db0b000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614806104f657506104f582610b61565b5b9050919050565b61050a6000801b336108aa565b610549576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610540906114f5565b60405180910390fd5b346002600082825461055b9190611611565b92505081905550600354600581905550436004819055503373ffffffffffffffffffffffffffffffffffffffff167f7dbc080e4530c8bcf265eb5c9a35ae096ca1eb607b7e802b96581ef4c5e1a703346040516105b89190611555565b60405180910390a2565b6000806000838152602001908152602001600020600101549050919050565b6105ea826105c2565b6105fb816105f6610bcb565b610bd3565b6106058383610c70565b505050565b610612610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161461067f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161067690611535565b60405180910390fd5b6106898282610d50565b5050565b60066020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050154908060060154905087565b60026001541415610715576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161070c90611515565b60405180910390fd5b6002600181905550600061072833610410565b90506000811115610851576000600660003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050806000015481600201819055504381600401819055506002548160050181905550600554816006018190555060008373ffffffffffffffffffffffffffffffffffffffff16836040516107c89061140e565b60006040518083038185875af1925050503d8060008114610805576040519150601f19603f3d011682016040523d82523d6000602084013e61080a565b606091505b505090508061084e576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610845906114d5565b60405180910390fd5b50505b3373ffffffffffffffffffffffffffffffffffffffff167f7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d5826040516108979190611555565b60405180910390a2506001808190555050565b600080600084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b60025481565b6000801b81565b60045481565b60055481565b6000600660003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905034600360008282546109829190611611565b925050819055503481600001600082825461099d9190611611565b92505081905550600454816004015410156109ef576004548160030154116109ca57600081600101819055505b348160010160008282546109de9190611611565b925050819055504381600301819055505b3373ffffffffffffffffffffffffffffffffffffffff167f2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c434604051610a359190611555565b60405180910390a250565b610a49826105c2565b610a5a81610a55610bcb565b610bd3565b610a648383610d50565b505050565b600080600660008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008160010154905060008260060154600554610aca91906116f2565b9050600060045484600301541015610ae157600092505b60045484600401541015610b11578284600201548560000154610b0491906116f2565b610b0e91906116f2565b90505b6000821415610b27576000945050505050610b56565b81818560050154600254610b3b91906116f2565b610b459190611698565b610b4f9190611667565b9450505050505b919050565b60035481565b60007f01ffc9a7000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b600033905090565b610bdd82826108aa565b610c6c57610c028173ffffffffffffffffffffffffffffffffffffffff166014610e31565b610c108360001c6020610e31565b604051602001610c21929190611423565b6040516020818303038152906040526040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c639190611493565b60405180910390fd5b5050565b610c7a82826108aa565b610d4c57600160008084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550610cf1610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45b5050565b610d5a82826108aa565b15610e2d57600080600084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550610dd2610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16837ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b60405160405180910390a45b5050565b606060006002836002610e449190611698565b610e4e9190611611565b67ffffffffffffffff811115610e8d577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6040519080825280601f01601f191660200182016040528015610ebf5781602001600182028036833780820191505090505b5090507f300000000000000000000000000000000000000000000000000000000000000081600081518110610f1d577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a9053507f780000000000000000000000000000000000000000000000000000000000000081600181518110610fa7577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a90535060006001846002610fe79190611698565b610ff19190611611565b90505b60018111156110dd577f3031323334353637383961626364656600000000000000000000000000000000600f861660108110611059577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b1a60f81b828281518110611096577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a905350600485901c9450806110d6906117e9565b9050610ff4565b5060008414611121576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401611118906114b5565b60405180910390fd5b8091505092915050565b60008135905061113a816119ca565b92915050565b60008135905061114f816119e1565b92915050565b600081359050611164816119f8565b92915050565b60008135905061117981611a0f565b92915050565b60006020828403121561119157600080fd5b600061119f8482850161112b565b91505092915050565b6000602082840312156111ba57600080fd5b60006111c884828501611140565b91505092915050565b6000602082840312156111e357600080fd5b60006111f184828501611155565b91505092915050565b6000806040838503121561120d57600080fd5b600061121b85828601611155565b925050602061122c8582860161112b565b9150509250929050565b60006020828403121561124857600080fd5b60006112568482850161116a565b91505092915050565b6112688161174a565b82525050565b61127781611756565b82525050565b6000611288826115df565b61129281856115f5565b93506112a28185602086016117b6565b6112ab81611871565b840191505092915050565b60006112c1826115df565b6112cb8185611606565b93506112db8185602086016117b6565b80840191505092915050565b60006112f46020836115f5565b91506112ff82611882565b602082019050919050565b60006113176012836115f5565b9150611322826118ab565b602082019050919050565b600061133a600f836115f5565b9150611345826118d4565b602082019050919050565b600061135d6000836115ea565b9150611368826118fd565b600082019050919050565b6000611380601783611606565b915061138b82611900565b601782019050919050565b60006113a3601f836115f5565b91506113ae82611929565b602082019050919050565b60006113c6601183611606565b91506113d182611952565b601182019050919050565b60006113e9602f836115f5565b91506113f48261197b565b604082019050919050565b611408816117ac565b82525050565b600061141982611350565b9150819050919050565b600061142e82611373565b915061143a82856112b6565b9150611445826113b9565b915061145182846112b6565b91508190509392505050565b6000602082019050611472600083018461125f565b92915050565b600060208201905061148d600083018461126e565b92915050565b600060208201905081810360008301526114ad818461127d565b905092915050565b600060208201905081810360008301526114ce816112e7565b9050919050565b600060208201905081810360008301526114ee8161130a565b9050919050565b6000602082019050818103600083015261150e8161132d565b9050919050565b6000602082019050818103600083015261152e81611396565b9050919050565b6000602082019050818103600083015261154e816113dc565b9050919050565b600060208201905061156a60008301846113ff565b92915050565b600060e082019050611585600083018a6113ff565b61159260208301896113ff565b61159f60408301886113ff565b6115ac60608301876113ff565b6115b960808301866113ff565b6115c660a08301856113ff565b6115d360c08301846113ff565b98975050505050505050565b600081519050919050565b600081905092915050565b600082825260208201905092915050565b600081905092915050565b600061161c826117ac565b9150611627836117ac565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561165c5761165b611813565b5b828201905092915050565b6000611672826117ac565b915061167d836117ac565b92508261168d5761168c611842565b5b828204905092915050565b60006116a3826117ac565b91506116ae836117ac565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156116e7576116e6611813565b5b828202905092915050565b60006116fd826117ac565b9150611708836117ac565b92508282101561171b5761171a611813565b5b828203905092915050565b60006117318261178c565b9050919050565b60006117438261178c565b9050919050565b60008115159050919050565b6000819050919050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b60005b838110156117d45780820151818401526020810190506117b9565b838111156117e3576000848401525b50505050565b60006117f4826117ac565b9150600082141561180857611807611813565b5b600182039050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b6000601f19601f8301169050919050565b7f537472696e67733a20686578206c656e67746820696e73756666696369656e74600082015250565b7f4661696c656420746f2077697468647261770000000000000000000000000000600082015250565b7f4e6f74207465616d206d656d6265720000000000000000000000000000000000600082015250565b50565b7f416363657373436f6e74726f6c3a206163636f756e7420000000000000000000600082015250565b7f5265656e7472616e637947756172643a207265656e7472616e742063616c6c00600082015250565b7f206973206d697373696e6720726f6c6520000000000000000000000000000000600082015250565b7f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560008201527f20726f6c657320666f722073656c660000000000000000000000000000000000602082015250565b6119d381611726565b81146119de57600080fd5b50565b6119ea81611738565b81146119f557600080fd5b50565b611a0181611756565b8114611a0c57600080fd5b50565b611a1881611760565b8114611a2357600080fd5b5056fea26469706673582212209c8c32143bca89cb35a9b5ddb896ffa2ed93c642bca02cbfc41fdeb9e14a6ca964736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600436106101015760003560e01c806391d1485411610095578063b37eabd911610064578063b37eabd91461034a578063d0e30db014610375578063d547741f1461037f578063e964b644146103a8578063f6153ccd146103e557610108565b806391d148541461028c5780639ec5a894146102c9578063a217fddf146102f4578063a9f8d1811461031f57610108565b80632f2ff15d116100d15780632f2ff15d146101ce57806336568abe146101f757806343b0215f1461022057806351cff8d91461026357610108565b806265453c1461010d57806301ffc9a71461014a578063152111f714610187578063248a9ca31461019157610108565b3661010857005b600080fd5b34801561011957600080fd5b50610134600480360381019061012f919061117f565b610410565b6040516101419190611555565b60405180910390f35b34801561015657600080fd5b50610171600480360381019061016c9190611236565b610483565b60405161017e919061145d565b60405180910390f35b61018f6104fd565b005b34801561019d57600080fd5b506101b860048036038101906101b391906111d1565b6105c2565b6040516101c59190611478565b60405180910390f35b3480156101da57600080fd5b506101f560048036038101906101f091906111fa565b6105e1565b005b34801561020357600080fd5b5061021e600480360381019061021991906111fa565b61060a565b005b34801561022c57600080fd5b506102476004803603810190610242919061117f565b61068d565b60405161025a9796959493929190611570565b60405180910390f35b34801561026f57600080fd5b5061028a600480360381019061028591906111a8565b6106cf565b005b34801561029857600080fd5b506102b360048036038101906102ae91906111fa565b6108aa565b6040516102c0919061145d565b60405180910390f35b3480156102d557600080fd5b506102de610914565b6040516102eb9190611555565b60405180910390f35b34801561030057600080fd5b5061030961091a565b6040516103169190611478565b60405180910390f35b34801561032b57600080fd5b50610334610921565b6040516103419190611555565b60405180910390f35b34801561035657600080fd5b5061035f610927565b60405161036c9190611555565b60405180910390f35b61037d61092d565b005b34801561038b57600080fd5b506103a660048036038101906103a191906111fa565b610a40565b005b3480156103b457600080fd5b506103cf60048036038101906103ca919061117f565b610a69565b6040516103dc9190611555565b60405180910390f35b3480156103f157600080fd5b506103fa610b5b565b6040516104079190611555565b60405180910390f35b600080600660008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905061045d83610a69565b8160020154826000015461047191906116f2565b61047b9190611611565b915050919050565b60007f7965db0b000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614806104f657506104f582610b61565b5b9050919050565b61050a6000801b336108aa565b610549576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610540906114f5565b60405180910390fd5b346002600082825461055b9190611611565b92505081905550600354600581905550436004819055503373ffffffffffffffffffffffffffffffffffffffff167f7dbc080e4530c8bcf265eb5c9a35ae096ca1eb607b7e802b96581ef4c5e1a703346040516105b89190611555565b60405180910390a2565b6000806000838152602001908152602001600020600101549050919050565b6105ea826105c2565b6105fb816105f6610bcb565b610bd3565b6106058383610c70565b505050565b610612610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161461067f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161067690611535565b60405180910390fd5b6106898282610d50565b5050565b60066020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050154908060060154905087565b60026001541415610715576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161070c90611515565b60405180910390fd5b6002600181905550600061072833610410565b90506000811115610851576000600660003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050806000015481600201819055504381600401819055506002548160050181905550600554816006018190555060008373ffffffffffffffffffffffffffffffffffffffff16836040516107c89061140e565b60006040518083038185875af1925050503d8060008114610805576040519150601f19603f3d011682016040523d82523d6000602084013e61080a565b606091505b505090508061084e576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610845906114d5565b60405180910390fd5b50505b3373ffffffffffffffffffffffffffffffffffffffff167f7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d5826040516108979190611555565b60405180910390a2506001808190555050565b600080600084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b60025481565b6000801b81565b60045481565b60055481565b6000600660003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905034600360008282546109829190611611565b925050819055503481600001600082825461099d9190611611565b92505081905550600454816004015410156109ef576004548160030154116109ca57600081600101819055505b348160010160008282546109de9190611611565b925050819055504381600301819055505b3373ffffffffffffffffffffffffffffffffffffffff167f2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c434604051610a359190611555565b60405180910390a250565b610a49826105c2565b610a5a81610a55610bcb565b610bd3565b610a648383610d50565b505050565b600080600660008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008160010154905060008260060154600554610aca91906116f2565b9050600060045484600301541015610ae157600092505b60045484600401541015610b11578284600201548560000154610b0491906116f2565b610b0e91906116f2565b90505b6000821415610b27576000945050505050610b56565b81818560050154600254610b3b91906116f2565b610b459190611698565b610b4f9190611667565b9450505050505b919050565b60035481565b60007f01ffc9a7000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b600033905090565b610bdd82826108aa565b610c6c57610c028173ffffffffffffffffffffffffffffffffffffffff166014610e31565b610c108360001c6020610e31565b604051602001610c21929190611423565b6040516020818303038152906040526040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c639190611493565b60405180910390fd5b5050565b610c7a82826108aa565b610d4c57600160008084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550610cf1610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45b5050565b610d5a82826108aa565b15610e2d57600080600084815260200190815260200160002060000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550610dd2610bcb565b73ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16837ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b60405160405180910390a45b5050565b606060006002836002610e449190611698565b610e4e9190611611565b67ffffffffffffffff811115610e8d577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6040519080825280601f01601f191660200182016040528015610ebf5781602001600182028036833780820191505090505b5090507f300000000000000000000000000000000000000000000000000000000000000081600081518110610f1d577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a9053507f780000000000000000000000000000000000000000000000000000000000000081600181518110610fa7577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a90535060006001846002610fe79190611698565b610ff19190611611565b90505b60018111156110dd577f3031323334353637383961626364656600000000000000000000000000000000600f861660108110611059577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b1a60f81b828281518110611096577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a905350600485901c9450806110d6906117e9565b9050610ff4565b5060008414611121576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401611118906114b5565b60405180910390fd5b8091505092915050565b60008135905061113a816119ca565b92915050565b60008135905061114f816119e1565b92915050565b600081359050611164816119f8565b92915050565b60008135905061117981611a0f565b92915050565b60006020828403121561119157600080fd5b600061119f8482850161112b565b91505092915050565b6000602082840312156111ba57600080fd5b60006111c884828501611140565b91505092915050565b6000602082840312156111e357600080fd5b60006111f184828501611155565b91505092915050565b6000806040838503121561120d57600080fd5b600061121b85828601611155565b925050602061122c8582860161112b565b9150509250929050565b60006020828403121561124857600080fd5b60006112568482850161116a565b91505092915050565b6112688161174a565b82525050565b61127781611756565b82525050565b6000611288826115df565b61129281856115f5565b93506112a28185602086016117b6565b6112ab81611871565b840191505092915050565b60006112c1826115df565b6112cb8185611606565b93506112db8185602086016117b6565b80840191505092915050565b60006112f46020836115f5565b91506112ff82611882565b602082019050919050565b60006113176012836115f5565b9150611322826118ab565b602082019050919050565b600061133a600f836115f5565b9150611345826118d4565b602082019050919050565b600061135d6000836115ea565b9150611368826118fd565b600082019050919050565b6000611380601783611606565b915061138b82611900565b601782019050919050565b60006113a3601f836115f5565b91506113ae82611929565b602082019050919050565b60006113c6601183611606565b91506113d182611952565b601182019050919050565b60006113e9602f836115f5565b91506113f48261197b565b604082019050919050565b611408816117ac565b82525050565b600061141982611350565b9150819050919050565b600061142e82611373565b915061143a82856112b6565b9150611445826113b9565b915061145182846112b6565b91508190509392505050565b6000602082019050611472600083018461125f565b92915050565b600060208201905061148d600083018461126e565b92915050565b600060208201905081810360008301526114ad818461127d565b905092915050565b600060208201905081810360008301526114ce816112e7565b9050919050565b600060208201905081810360008301526114ee8161130a565b9050919050565b6000602082019050818103600083015261150e8161132d565b9050919050565b6000602082019050818103600083015261152e81611396565b9050919050565b6000602082019050818103600083015261154e816113dc565b9050919050565b600060208201905061156a60008301846113ff565b92915050565b600060e082019050611585600083018a6113ff565b61159260208301896113ff565b61159f60408301886113ff565b6115ac60608301876113ff565b6115b960808301866113ff565b6115c660a08301856113ff565b6115d360c08301846113ff565b98975050505050505050565b600081519050919050565b600081905092915050565b600082825260208201905092915050565b600081905092915050565b600061161c826117ac565b9150611627836117ac565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561165c5761165b611813565b5b828201905092915050565b6000611672826117ac565b915061167d836117ac565b92508261168d5761168c611842565b5b828204905092915050565b60006116a3826117ac565b91506116ae836117ac565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156116e7576116e6611813565b5b828202905092915050565b60006116fd826117ac565b9150611708836117ac565b92508282101561171b5761171a611813565b5b828203905092915050565b60006117318261178c565b9050919050565b60006117438261178c565b9050919050565b60008115159050919050565b6000819050919050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b60005b838110156117d45780820151818401526020810190506117b9565b838111156117e3576000848401525b50505050565b60006117f4826117ac565b9150600082141561180857611807611813565b5b600182039050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b6000601f19601f8301169050919050565b7f537472696e67733a20686578206c656e67746820696e73756666696369656e74600082015250565b7f4661696c656420746f2077697468647261770000000000000000000000000000600082015250565b7f4e6f74207465616d206d656d6265720000000000000000000000000000000000600082015250565b50565b7f416363657373436f6e74726f6c3a206163636f756e7420000000000000000000600082015250565b7f5265656e7472616e637947756172643a207265656e7472616e742063616c6c00600082015250565b7f206973206d697373696e6720726f6c6520000000000000000000000000000000600082015250565b7f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560008201527f20726f6c657320666f722073656c660000000000000000000000000000000000602082015250565b6119d381611726565b81146119de57600080fd5b50565b6119ea81611738565b81146119f557600080fd5b50565b611a0181611756565b8114611a0c57600080fd5b50565b611a1881611760565b8114611a2357600080fd5b5056fea26469706673582212209c8c32143bca89cb35a9b5ddb896ffa2ed93c642bca02cbfc41fdeb9e14a6ca964736f6c63430008040033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "deposit()": {
+        "details": "make user deposit"
+      },
+      "depositRewards()": {
+        "details": "put reward to pool"
+      },
+      "getRoleAdmin(bytes32)": {
+        "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+      },
+      "grantRole(bytes32,address)": {
+        "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "hasRole(bytes32,address)": {
+        "details": "Returns `true` if `account` has been granted `role`."
+      },
+      "renounceRole(bytes32,address)": {
+        "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+      },
+      "revokeRole(bytes32,address)": {
+        "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "rewardBalanceOf(address)": {
+        "details": "get reward amount of user (except deposit)",
+        "params": {
+          "user": "address of user"
+        },
+        "returns": {
+          "_0": "reward"
+        }
+      },
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}."
+      },
+      "withdraw(address)": {
+        "details": "withdraw user deposit and reward to recipient",
+        "params": {
+          "recipient": "recipient address"
+        }
+      },
+      "withdrawBalanceOf(address)": {
+        "details": "get amount available to withdraw",
+        "params": {
+          "user": "address of user"
+        },
+        "returns": {
+          "_0": "value"
+        }
+      }
+    },
+    "stateVariables": {
+      "lastRewardBlock": {
+        "details": "block where the last reward is deposited"
+      },
+      "rewards": {
+        "details": "total rewards deposited by team members"
+      },
+      "totalDeposit": {
+        "details": "total deposit made by users"
+      },
+      "totalDepositBeforeLastReward": {
+        "details": "total deposit made by all users until the last reward deposit"
+      },
+      "userInfos": {
+        "details": "user address => user info"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "d: user deposit  r: reward deposit  w: first user withdrawl  w*: user withdrawl now  timeline:  ---- d ---- r ---- w ---- d ---- r ---- d ---- w* ---->  ---------------------------------------->                total deposit  --------------------------------->                       rewards  ------------------->                                     reward on last withdrawl  ------------------->                                     deposit before last withdrawl                                   +------>                deposit after last reward                     +------------->                       deposits applicable to this part participates in user reward calculation  user reward =     (rewards - reward on last withdrawl) *     (total deposit -  deposit before last withdraw - deposit after last withdrawl) /     total deposit before last rewards",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 62,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "_roles",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_struct(RoleData)57_storage)"
+      },
+      {
+        "astId": 378,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "_status",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 704,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "rewards",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 707,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "totalDeposit",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 710,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "lastRewardBlock",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 713,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "totalDepositBeforeLastReward",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 719,
+        "contract": "contracts/EthPool.sol:EthPool",
+        "label": "userInfos",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_mapping(t_address,t_struct(UserInfo)698_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_struct(UserInfo)698_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct EthPool.UserInfo)",
+        "numberOfBytes": "32",
+        "value": "t_struct(UserInfo)698_storage"
+      },
+      "t_mapping(t_bytes32,t_struct(RoleData)57_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+        "numberOfBytes": "32",
+        "value": "t_struct(RoleData)57_storage"
+      },
+      "t_struct(RoleData)57_storage": {
+        "encoding": "inplace",
+        "label": "struct AccessControl.RoleData",
+        "members": [
+          {
+            "astId": 54,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "members",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_bool)"
+          },
+          {
+            "astId": 56,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "adminRole",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes32"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_struct(UserInfo)698_storage": {
+        "encoding": "inplace",
+        "label": "struct EthPool.UserInfo",
+        "members": [
+          {
+            "astId": 683,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "totalDeposit",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 685,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "depositAfterLastReward",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 687,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "depositBeforeLastWithdraw",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 689,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "lastDepositBlock",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 691,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "lastWithdrawBlock",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 694,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "rewardOnLastWithdraw",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 697,
+            "contract": "contracts/EthPool.sol:EthPool",
+            "label": "totalDepositBeforeLastWithdraw",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "224"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
